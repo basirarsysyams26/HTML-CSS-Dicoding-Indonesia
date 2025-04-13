@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .fancy {
+        color: red;
+      }
+      p.fancy {
+        color: blue;
+      }
+      #special {
+        background-color: skyblue;
+      }
+      a[href] {
+      }
+      ul {
+        font-size: 18px;
+      }
+      a[href] {
+        color: red;
+      }
+      a[href^="#"] {
+        background-color: aqua;
+      }
+      a[href*="example" i] {
+        color: blue;
+      }
+      a[href*="Insensitive" i] {
+        color: green;
+      }
+      a[href$="org"] {
+        background-color: deeppink;
+      }
+      /* ASS */
+      img + p {
+        color: green;
+      }
+      /* GSS */
+      /* img ~ p {
+        color: brown;
+      } */
+      /* CS dan DS */
+      .cs > p {
+        color: red;
+      }
+      .ds p {
+        color: gold;
+      }
+      a:link {
+        color: red;
+      }
+      a:visited {
+        color: green;
+      }
+      a:hover {
+        color: blue;
+      }
+      a:active {
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- class selector -->
+    <h3 class="fancy">Kota Bandung</h3>
+    <p class="fancy">Kota bandung adalah...</p>
+    <!-- id selector -->
+    <!-- id harus satu -->
+    <div id="special">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illo
+        atque sapiente delectus inventore consequatur! Soluta in officiis hic
+        cum vel inventore corporis, non velit nihil mollitia aliquam sunt saepe.
+      </p>
+    </div>
+    <!-- Ini adalah contoh penggunaan id yg kurang tepat krn ada dua id yg sama -->
+    <div id="special">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi
+        necessitatibus quos natus! A cupiditate perferendis inventore placeat
+        sequi fugit repellat obcaecati tenetur rerum aspernatur magnam eius,
+        laudantium magni voluptatum dolorem!
+      </p>
+    </div>
+    <!-- attribute selector -->
+    <ul>
+      <li><a href="#internal">Internal link</a></li>
+      <li><a href="http://example.com">Example link</a></li>
+      <li><a href="#InSensitive">Insensitive internal link</a></li>
+      <li><a href="#http://example.org">Example org link</a></li>
+    </ul>
+
+    <!-- universal selector menggunakan *-->
+    <!-- Adjacent Sibling Selector + (ASS) -->
+    <!-- img + p -->
+    <p>Paragraph yang TIDAK masuk ke ASS</p>
+    <img
+      src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+      alt=""
+      width="200px"
+    />
+    <p>Paragraph yang MASUK ke ASS</p>
+    <p>Paragraph yang TIDAK masuk ke ASS</p>
+    <!-- General Sibling Selector ~ (GSS) -->
+    <!-- img ~ p -->
+    <p>Paragraph yang TIDAK masuk ke ASS</p>
+    <img
+      src="https://raw.githubusercontent.com/dicodingacademy/a123-webdasar-labs/099-shared-files/shared-media/g-dicoding-logo.png"
+      alt=""
+      width="200px"
+    />
+    <p>Paragrapah yang MASUK ke ASS</p>
+    <p>Paragrapah yang MASUK ke ASS</p>
+    <p>Paragrapah yang MASUK ke ASS</p>
+    <!-- Child Selector (CS) -->
+    <div class="cs">
+      <p>Ini CS</p>
+      <section>
+        <p>Ini BUKAN CS</p>
+      </section>
+      <p>Ini CS</p>
+    </div>
+    <!-- Descendant Selector (DS) -->
+    <div class="ds">
+      <p>Ini DS</p>
+      <section>
+        <p>Ini DS</p>
+      </section>
+      <p>Ini DS</p>
+    </div>
+    <!-- Pseudo Selector -->
+    <p>
+      Dapatkan pekerjaan impian di
+      <a href="https://jobs.dicoding.com/">Dicoding Jobs</a>
+    </p>
+  </body>
+</html>
